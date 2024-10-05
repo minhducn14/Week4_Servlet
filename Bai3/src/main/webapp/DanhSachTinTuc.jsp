@@ -47,21 +47,21 @@ th, td {
 			<table>
 				<thead>
 					<tr>
+						<th>Mã Danh Mục</th>
 						<th>Mã Tin Tức</th>
 						<th>Tiêu đề</th>
 						<th>Nội dung</th>
 						<th>Liên Kết</th>
-						<th>Mã Danh Mục</th>
 					</tr>
 				</thead>
 				<tbody>
-					<c:forEach items="${tinTucs}" var="tinTuc">
+					<c:forEach items="${list}" var="a">
 						<tr>
-							<td>${tinTuc.maTinTuc}</td>
-							<td>${tinTuc.tieuDe}</td>
-							<td>${tinTuc.noiDungTT}</td>
-							<td>${tinTuc.lienKet}</td>
-							<td>${tinTuc.danhMuc.maDM}</td>
+							<td>${a.danhMuc.maDM}</td>
+							<td>${a.maTinTuc}</td>
+							<td>${a.tieuDe}</td>
+							<td>${a.noiDungTT}</td>
+							<td>${a.lienKet}</td>
 						</tr>
 					</c:forEach>
 				</tbody>

@@ -100,7 +100,9 @@ public class TinTucDAOImpl implements TinTucDAO {
 
 	@Override
 	public List<TinTuc> getAllTinTuc() {
-		String sql = "SELECT * FROM TINTUC";
+		String sql = "SELECT tt.MADM, tt.MATT, tt.TIEUDE, tt.NOIDUNGTT, tt.LIENKET \r\n"
+				+ "FROM tintuc tt \r\n"
+				+ "ORDER BY tt.MADM DESC";
 		List<TinTuc> list = new ArrayList<TinTuc>();
 		try (Connection con = this.datasource.getConnection();
 				PreparedStatement ps = (PreparedStatement) con.prepareStatement(sql);
